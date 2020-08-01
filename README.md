@@ -10,6 +10,8 @@ The lazy person configures the vim scheme, with detailed instructions, and the r
 
 > 更多精彩内容，请关注微信公众号【Pythonnote】或者【全栈技术精选】<br> 请收藏个人网站 pythonnote.cn
 
+![vim展示](https://github.com/EthanYan6/pic/raw/master/vim%E5%B1%95%E7%A4%BA.png)
+
 ## 2.步骤
 
 ### 1.安装包管理工具
