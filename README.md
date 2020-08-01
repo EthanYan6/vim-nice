@@ -1,10 +1,14 @@
 # vim-nice
 
+> 作者：小闫同学
+
 ## 1.说明
 
 懒人配置vim方案，有详细说明，以及现成的.vimrc配置文件供使用。
 
 The lazy person configures the vim scheme, with detailed instructions, and the ready-made `.vimrc` configuration file for use.
+
+> 更多精彩内容，请关注微信公众号【Pythonnote】或者【全栈技术精选】<br> 请收藏个人网站 pythonnote.cn
 
 ## 2.步骤
 
