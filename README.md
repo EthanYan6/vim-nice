@@ -158,7 +158,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### 3.4 注意
 
-如果进入 `tmux` 中发现打开 `vim` 时，发现状态栏以及背景等**颜色不正常**
+如果进入 `tmux` 中打开 `vim` 时，发现状态栏以及背景等**颜色不正常**
 
 **解决方法**：
 
