@@ -122,7 +122,7 @@ set t_Co=256
 
 [tmux使用教程](https://www.pythonnote.cn/Tmux让你开发效率飞起/)
 
-![tmux展示图片](C:\Users\EthanYan\AppData\Roaming\Typora\typora-user-images\image-20200803230326107.png)
+![tmux展示图片](https://github.com/EthanYan6/pic/raw/37009d8171c8b05e07233ae254c063664953db74/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91_20200803230243.jpg)
 
 ### 3.1 下载tmux包管理工具
 
