@@ -44,6 +44,8 @@ Plugin 'isRuslan/vim-es6'
 " 自动格式化 js 代码
 Plugin 'mitermayer/vim-prettier'
 " <leader> + p
+" 显示文件中类、函数等大纲视图
+Plugin 'majutsushi/tagbar'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
@@ -57,6 +59,17 @@ filetype plugin indent on    " required
 " "
 " " see :h vundle for more details or wiki for FAQ
 " " Put your non-Plugin stuff after this line
+""""""""""""""""""""""""""""""""""""""""""""""
+" tagbar 的配置
+nmap <F9> :TagbarToggle<CR>
+""设置tagbar使用的ctags的插件,必须要设置对  
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+"设置tagbar的窗口宽度
+let g:tagbar_width=40
+""设置tagbar的窗口显示的位置,为左边
+let g:tagbar_right=1
+"打开文件自动 打开tagbar
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx,*.py call tagbar#autoopen()
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " 目录树的配置

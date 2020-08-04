@@ -68,7 +68,36 @@ yum -y install the_silver_searcher
 brew install the_silver_searcher
 ```
 
-### 2.4 用仓库中.vimrc文件替换掉电脑中的同名配置文件
+### 2.4 安装 ctags
+
+1.安装
+
+```
+# MAC
+brew install ctags-exuberant
+```
+
+2.创建文件识别我们安装的 `ctags`
+
+```shell
+vim ~/.profile
+```
+
+3.添加一句话：
+
+```shell
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+```
+
+4.保存后，终端刷新一下这个文件：
+
+```shell
+source ~/.profile
+```
+
+
+
+### 2.5 用仓库中.vimrc文件替换掉电脑中的同名配置文件
 
 1.将 `.vimrc` 放到家目录 `~/` 下
 
