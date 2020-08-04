@@ -41,7 +41,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'skammer/vim-css-color'
 Plugin 'pangloss/vim-javascript'
 Plugin 'isRuslan/vim-es6'
-Plugin 'joestelmach/lint.vim'
+" 自动格式化 js 代码
+Plugin 'mitermayer/vim-prettier'
+" <leader> + p
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
