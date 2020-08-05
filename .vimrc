@@ -20,6 +20,7 @@ Plugin 'tacahiroy/ctrlp-funky'
 " 快速跳转
 Plugin 'easymotion/vim-easymotion'
 " 根据具体内容搜索文件：:Ag [options] {pattern} [{directory}]
+" :Ag! content 
 Plugin 'rking/ag.vim'
 " 语法检测
 Plugin 'vim-syntastic/syntastic'
