@@ -70,12 +70,16 @@ brew install the_silver_searcher
 
 ### 2.4 安装 ctags
 
+#### 2.4.1 Mac
+
 1.安装
 
 ```
 # MAC
 brew install ctags-exuberant
 ```
+
+> 因为 `mac` 系统中自带了一个老版本的 `ctags`，我们需要一个新版本的，并且让 `vim` 识别到我们新下载的内容，所以需要安装后，添加配置。
 
 2.创建文件识别我们安装的 `ctags`
 
@@ -95,7 +99,20 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 source ~/.profile
 ```
 
+#### 2.4.2 Ubuntu
 
+1.安装
+
+```shell
+# Ubuntu
+sudo apt install ctags
+```
+
+2.将仓库中 `.vimrc` 中第67行内容中 `ctags` 命令的路径修改为下列内容
+
+```shell
+let g:tagbar_ctags_bin='/usr/bin/ctags'
+```
 
 ### 2.5 用仓库中.vimrc文件替换掉电脑中的同名配置文件
 
