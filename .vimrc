@@ -19,8 +19,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 " 快速跳转
 Plugin 'easymotion/vim-easymotion'
-" 根据具体内容搜索文件：:Ack xxx
-Plugin 'mileszs/ack.vim'
+" 根据具体内容搜索文件：:Ag [options] {pattern} [{directory}]
+Plugin 'rking/ag.vim'
 " 语法检测
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8' " F7 检测代码是否符合规范
@@ -98,8 +98,9 @@ nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 let g:ctrlp_funky_matchtype = 'path'
 let g:ctrlp_funky_syntax_highlight = 1
 """"""""""""""""""""""""""""""""""""""""""""""
-" ack 命令配置 
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" ag.vim 命令配置 
+let g:ag_highlight=1
+let g:ag_working_path_mode="r"
 """"""""""""""""""""""""""""""""""""""""""""""
 " autopep8配置 
 autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
