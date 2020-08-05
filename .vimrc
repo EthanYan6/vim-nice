@@ -200,7 +200,7 @@ set backspace=2
 set whichwrap+=<,>,h,l 
 
 " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位） 
-set mouse=a 
+set mouse=a " a启动了所有模式，这样就屏蔽了鼠标右健功能，c模式开启复制黏贴 
 set selection=exclusive 
 set selectmode=mouse,key 
 
