@@ -214,11 +214,22 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### 3.4 注意
 
-如果进入 `tmux` 中打开 `vim` 时，发现状态栏以及背景等**颜色不正常**
+1.如果进入 `tmux` 中打开 `vim` 时，发现状态栏以及背景等**颜色不正常**
 
 **解决方法**：
 
 使用 `tmux -2` 命令启动。
 
 > 之前我们都是使用 `tmux` 开启并进入到多窗口页面，现在添加参数 `-2`
+
+2.如果使用 `ubuntu` 系统的话，有可能你会发现进入 `tmux` ，鼠标右键无法使用复制粘贴功能，弹出来的菜单是 `tmux` 的帮助菜单。
+
+**解决办法**：在 `tmux` 中先按 `prefix` （ 也就是`Ctrl + B`），然后按冒号，输入如下内容：
+
+```shell
+# 2.1版本之后
+: set -g mouse off 
+# 2.1版本之前
+: set -g mode-mouse off
+```
 
