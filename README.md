@@ -49,6 +49,8 @@ rm -rf colors README.md LICENSE.md
 
 ### 2.3 安装搜索命令ag
 
+> 配合 `vim` 插件 `ag.vim` 使用
+
 #### 2.3.1 Ubuntu
 
 ```shell
@@ -69,6 +71,8 @@ brew install the_silver_searcher
 ```
 
 ### 2.4 安装 ctags
+
+> 配合 `vim` 插件 `tagbar` 使用
 
 #### 2.4.1 Mac
 
@@ -114,7 +118,29 @@ sudo apt install ctags
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 ```
 
-### 2.5 用仓库中.vimrc文件替换掉电脑中的同名配置文件
+### 2.5 安装代码格式化插件
+
+1.配合 `vim` 插件 `vim-autopep8` 使用，可以自动格式化 `python` 代码
+
+```shell
+sudo pip3 install autopep8
+```
+
+> `sudo` 是因为需要给全局安装，而不是当前用户安装
+
+2.配合 `vim` 插件 `vim-flake8` 使用，可以提示 `python` 代码错误并给出修改意见。
+
+```shell
+sudo pip3 install flake8
+```
+
+3.配合 `vim` 插件 `vim-prettier` 使用，可以格式化前端代码。
+
+```shell
+sudo npm install -g prettier
+```
+
+### 2.6 用仓库中.vimrc文件替换掉电脑中的同名配置文件
 
 1.将 `.vimrc` 放到家目录 `~/` 下
 
@@ -134,7 +160,7 @@ vim ~/.vimrc
 
 > 上述命令在 `vim` 的命令模式下输入。输入完后回车，耐心等待下载，插件比较多耗时比较长。如果下载完成后，底部状态行会显示 `Done!`
 
-### 2.5 注意
+### 2.7 注意
 
 1.如果报错：The ycmd server SHUT DOWN (restart with ...low the instructions in the documen
 
