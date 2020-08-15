@@ -6,7 +6,9 @@
 
 [vim使用教程](https://www.pythonnote.cn/vim操作有这一篇就足够了/)
 
-懒人配置vim方案，有详细说明，以及现成的.vimrc配置文件供使用。
+懒人配置vim方案，现成的 `.vimrc` 配置文件，仅需按照步骤安装即可。
+
+此 `.vimrc` 中安装了一些常用的插件，如目录树、函数列表、文件搜索等等，大家可以根据需要，结合配置文件中注释内容，删除掉不需要的插件。（比如小闫同学写 `js` 、 `python` ，以及 `go` ，所以偏向这三者，有这三者的语法高亮、格式检查插件，如果你不需要，完全可以删除相应内容。） 
 
 The lazy person configures the vim scheme, with detailed instructions, and the ready-made `.vimrc` configuration file for use.
 
@@ -212,7 +214,18 @@ set t_Co=256
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-### 3.2 将该仓库中 .tmux.conf 放到家目录下
+### 3.2 系统命令预备下载
+
+1.`tmux-urlview` 插件需要安装 `urlview` 命令。
+
+```shell
+# Mac
+brew install urlview
+```
+
+> 此插件可以寻找 `tmux` 中出现的所有的 `url` ，通过 `ctrl-b + u` 列出所有链接，然后回车直接用浏览器打开。
+
+### 3.3 将该仓库中 .tmux.conf 放到家目录下
 
 如果你的家目录下存在同名文件，则替换为该仓库中的 `.tmux.conf` 文件。
 
@@ -238,7 +251,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 <ctrl-b> + <ctrl-r>
 ```
 
-### 3.4 注意
+### 3.5 注意
 
 1.如果进入 `tmux` 中打开 `vim` 时，发现状态栏以及背景等**颜色不正常**
 

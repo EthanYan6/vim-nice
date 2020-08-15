@@ -47,6 +47,8 @@ Plugin 'mitermayer/vim-prettier'
 " <leader> + p
 " 显示文件中类、函数等大纲视图
 Plugin 'majutsushi/tagbar'
+" go 语言代码检查以及语法高亮
+Plugin 'fatih/vim-go'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
@@ -120,6 +122,13 @@ let g:ycm_seed_identifiers_with_syntax = 1                  " 语法关键字补
 let g:gitgutter_terminal_reports_focus = 0
 nnoremap <leader>gd :GitGutterToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""
+" vim-go 语法高亮设置
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " 一般设定 
