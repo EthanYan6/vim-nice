@@ -214,6 +214,8 @@ set t_Co=256
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
+`Tmux-plugins` 集合：https://github.com/tmux-plugins
+
 ### 3.2 系统命令预备下载
 
 1.`tmux-urlview` 插件需要安装 `urlview` 命令。
@@ -224,6 +226,33 @@ brew install urlview
 ```
 
 > 此插件可以寻找 `tmux` 中出现的所有的 `url` ，通过 `ctrl-b + u` 列出所有链接，然后回车直接用浏览器打开。
+
+2.`tmux-mem-cpu-load` 插件需要安装命令：
+
+```shell
+# Mac
+brew install tmux-mem-cpu-load
+```
+
+右下角显示的结果说明：
+
+```shell
+  2885/7987MB [|||||     ]  51.2% 2.11 2.35 2.44
+
+   ^    ^          ^         ^     ^    ^    ^
+   |    |          |         |     |    |    |
+   1    2          3         4     5    6    7
+   
+1. Currently used memory.
+2. Available memory.
+3. CPU usage bar graph.
+4. CPU usage percentage.
+5. Load average for the past minute.
+6. Load average for the past 5 minutes.
+7. Load average for the past 15 minutes.
+```
+
+> `load average` 显示的是最近1分钟、5分钟和15分钟的系统平均负载
 
 ### 3.3 将该仓库中 .tmux.conf 放到家目录下
 
