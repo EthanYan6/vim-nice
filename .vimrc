@@ -49,6 +49,8 @@ Plugin 'mitermayer/vim-prettier'
 Plugin 'majutsushi/tagbar'
 " go 语言代码检查以及语法高亮
 Plugin 'fatih/vim-go'
+" python跳转以及补全
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
@@ -283,7 +285,7 @@ set shiftwidth=4
 " 不要用空格代替制表符 
 set noexpandtab 
 
-autocmd FileType javascript setlocal sw=2 ts=2 et ai
+autocmd FileType javascript,json setlocal sw=2 ts=2 et ai
 
 " 不要换行 
 set nowrap 

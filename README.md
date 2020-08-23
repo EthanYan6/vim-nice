@@ -142,6 +142,12 @@ sudo pip3 install flake8
 sudo npm install -g prettier
 ```
 
+4.配合 `vim` 插件 `jedi-vim` 使用，可以对 `python` 代码进行补全以及跳转。
+
+```shell
+pip install jedi
+```
+
 ### 2.6 用仓库中.vimrc文件替换掉电脑中的同名配置文件
 
 1.将 `.vimrc` 放到家目录 `~/` 下
