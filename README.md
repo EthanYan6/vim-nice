@@ -26,7 +26,13 @@ The lazy person configures the vim scheme, with detailed instructions, and the r
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
 ```
 
-### 2.2 下载最经典的vim配色方案
+### 2.2 下载最经典的vim配色方案(选)
+
+> 如果想使用此主题，按照下方步骤下载好后，打开 `.vimrc` 中下面代码的注释(删除代码前的双引号)即可使用：
+>
+> ```shell
+> "colorscheme molokai
+> ```
 
 1.克隆所需仓库文件
 
@@ -148,6 +154,12 @@ sudo npm install -g prettier
 
 ```shell
 pip install jedi
+```
+
+5.配合 `vim-vue` 使用
+
+```shell
+npm i -g eslint eslint-plugin-vue 
 ```
 
 ### 2.6 用仓库中.vimrc文件替换掉电脑中的同名配置文件

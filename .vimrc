@@ -39,7 +39,6 @@ Plugin 'airblade/vim-gitgutter'
 "skip: <C-x> skip the next match
 "prev: <C-p> remove current virtual cursor + selection and go back on previous match
 "select all: <A-n> start multicursor and directly select all matches
-Plugin 'skammer/vim-css-color'
 Plugin 'pangloss/vim-javascript'
 Plugin 'isRuslan/vim-es6'
 " 自动格式化 js 代码
@@ -51,6 +50,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
 " python跳转以及补全
 Plugin 'davidhalter/jedi-vim'
+" vue颜色显示
+Plugin 'posva/vim-vue'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
@@ -81,6 +82,11 @@ autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx,*.py call tagbar#autoopen()
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 " nerdtree
 autocmd vimenter * NERDTree    " 打开vim，自动开启nerd tree
+""""""""""""""""""""""""""""""""""""""""""""""
+" vim-vue setting
+let g:vue_pre_processors = 'detect_on_enter'
+autocmd FileType vue syntax sync fromstart
+let g:syntastic_javascript_checkers = ['eslint']
 """"""""""""""""""""""""""""""""""""""""""""""
 " vim-smooth-scroll配置
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
@@ -136,7 +142,7 @@ let g:go_highlight_extra_types = 1
 " 一般设定 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " 修改 vim 颜色，对应~/.vim/color
-colorscheme molokai
+"colorscheme molokai
 
 " 设定默认解码 
 set fenc=utf-8 
@@ -171,11 +177,8 @@ set viminfo+=!
 set iskeyword+=_,$,@,%,#,- 
 
 " 语法高亮 
+colo desert
 syntax on 
-
-" 高亮字符，让其不受100列限制 
-:highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white 
-:match OverLength '\%101v.*' 
 
 " 状态行颜色 
 highlight StatusLine guifg=SlateBlue guibg=Yellow 
@@ -285,10 +288,17 @@ set shiftwidth=4
 " 不要用空格代替制表符 
 set noexpandtab 
 
-autocmd FileType javascript,json setlocal sw=2 ts=2 et ai
+"autocmd FileType javascript,json setlocal sw=2 ts=2 et ai
+" 将js，vue和html的缩进设置为两个空格
+au BufNewFile,BufRead *.html,*.js,*.vue set tabstop=2
+au BufNewFile,BufRead *.html,*.js,*.vue set softtabstop=2
+au BufNewFile,BufRead *.html,*.js,*.vue set shiftwidth=2
+au BufNewFile,BufRead *.html,*.js,*.vue set expandtab
+au BufNewFile,BufRead *.html,*.js,*.vue set autoindent
+au BufNewFile,BufRead *.html,*.js,*.vue set fileformat=unix
 
 " 不要换行 
-set nowrap 
+set wrap 
 
 " 在行和段开始处使用制表符 
 set smarttab 
@@ -299,7 +309,7 @@ set smarttab
 " 只在下列文件类型被侦测到的时候显示行号，普通文本文件不显示 
 
 if has("autocmd") 
-autocmd FileType xml,javascript,html,c,cs,java,perl,shell,bash,cpp,python,vim,php,ruby set number 
+autocmd FileType xml,javascript,html,vue,c,cs,java,perl,shell,bash,cpp,python,vim,php,ruby set number 
 autocmd FileType xml,html vmap <C-o> <ESC>'<i<!--<ESC>o<ESC>'>o--> 
 autocmd FileType java,c,cpp,cs vmap <C-o> <ESC>'<o 
 autocmd FileType html,text,php,vim,c,java,xml,bash,shell,perl,python setlocal textwidth=100 
