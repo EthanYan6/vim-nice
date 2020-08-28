@@ -226,7 +226,7 @@ set t_Co=256
 
 [tmux使用教程](https://www.pythonnote.cn/Tmux让你开发效率飞起/)
 
-![tmux展示图片](https://github.com/EthanYan6/pic/raw/37009d8171c8b05e07233ae254c063664953db74/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91_20200803230243.jpg)
+![tmux展示图片](./images/tmux示意图.png)
 
 ### 3.1 下载tmux包管理工具
 
@@ -273,6 +273,8 @@ brew install tmux-mem-cpu-load
 ```
 
 > `load average` 显示的是最近1分钟、5分钟和15分钟的系统平均负载
+>
+> 如果底部栏右侧显示方框小问号，可以下载此字体 [powerline-font](https://github.com/powerline/fonts)
 
 ### 3.3 将该仓库中 .tmux.conf 放到家目录下
 
