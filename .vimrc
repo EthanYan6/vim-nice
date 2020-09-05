@@ -40,7 +40,6 @@ Plugin 'airblade/vim-gitgutter'
 "prev: <C-p> remove current virtual cursor + selection and go back on previous match
 "select all: <A-n> start multicursor and directly select all matches
 Plugin 'pangloss/vim-javascript'
-Plugin 'isRuslan/vim-es6'
 " 自动格式化 js 代码
 Plugin 'mitermayer/vim-prettier'
 " <leader> + p
@@ -137,13 +136,22 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
+""""""""""""""""""""""""""""""""""""""""""""""
+" vim-javascript设置
+" 高亮文档字符串
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " 一般设定 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " 修改 vim 颜色，对应~/.vim/color
 "colorscheme molokai
-
 " 设定默认解码 
 set fenc=utf-8 
 set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936 
