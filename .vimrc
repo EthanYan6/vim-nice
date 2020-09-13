@@ -296,6 +296,9 @@ set shiftwidth=4
 " 不要用空格代替制表符 
 set noexpandtab 
 
+" 设置每行的字数
+set tw=200
+
 "autocmd FileType javascript,json setlocal sw=2 ts=2 et ai
 " 将js，vue和html的缩进设置为两个空格
 au BufNewFile,BufRead *.html,*.js,*.vue set tabstop=2
@@ -304,6 +307,13 @@ au BufNewFile,BufRead *.html,*.js,*.vue set shiftwidth=2
 au BufNewFile,BufRead *.html,*.js,*.vue set expandtab
 au BufNewFile,BufRead *.html,*.js,*.vue set autoindent
 au BufNewFile,BufRead *.html,*.js,*.vue set fileformat=unix
+
+" 配置prettier
+let g:prettier#config#tab_width = 4
+let g:prettier#autoformat = 0
+let g:prettier#config#print_width = 120
+let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#jsx_bracket_same_line = 'true'
 
 " 不要换行 
 set wrap 
