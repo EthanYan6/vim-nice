@@ -286,18 +286,14 @@ set smartindent
 " 使用C样式的缩进 
 set cindent 
 
-" 制表符为4 
-set tabstop=4 
-
-" 统一缩进为4 
-set softtabstop=4 
-set shiftwidth=4 
-
-" 不要用空格代替制表符 
-set noexpandtab 
-
-" 设置每行的字数
-set tw=200
+" 设TAB宽度为4个空格 
+set ts=4
+" 在编辑模式的时候按退格键的时候退回缩进的长度，当使用 expandtab 时特别有用
+set softtabstop=4
+" 表示每一级缩进的长度，一般设置成跟 softtabstop 一样
+set shiftwidth=4
+" 表示缩进用空格来表示
+set expandtab
 
 "autocmd FileType javascript,json setlocal sw=2 ts=2 et ai
 " 将js，vue和html的缩进设置为两个空格
@@ -330,7 +326,7 @@ if has("autocmd")
 autocmd FileType xml,javascript,html,vue,c,cs,java,perl,shell,bash,cpp,python,vim,php,ruby set number 
 autocmd FileType xml,html vmap <C-o> <ESC>'<i<!--<ESC>o<ESC>'>o--> 
 autocmd FileType java,c,cpp,cs vmap <C-o> <ESC>'<o 
-autocmd FileType html,text,php,vim,c,java,xml,bash,shell,perl,python setlocal textwidth=100 
+autocmd FileType html,text,php,vim,c,java,xml,bash,shell,perl,python setlocal textwidth=200 
 autocmd Filetype html,xml,xsl source $VIMRUNTIME/plugin/closetag.vim 
 autocmd BufReadPost * 
 \ if line("'\"") > 0 && line("'\"") <= line("$") | 
