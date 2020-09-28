@@ -306,10 +306,11 @@ au BufNewFile,BufRead *.html,*.js,*.vue set fileformat=unix
 
 " 配置prettier
 let g:prettier#config#tab_width = 4
-let g:prettier#autoformat = 0
 let g:prettier#config#print_width = 120
 let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#jsx_bracket_same_line = 'true'
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 " 不要换行 
 set wrap 
