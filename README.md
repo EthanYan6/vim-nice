@@ -224,7 +224,103 @@ set t_Co=256
 
 ### 2.8 部分插件使用说明
 
-#### 2.8.1 `c.vim` 
+#### 2.8.1 `nerdtree`
+
+```shell
+o   : 打开节点或者打开文件（打开文件的时候，光标会跑到文件中）
+go  : 打开节点或者打开文件（打开文件的时候，光标在目录树中）
+p   : 到上级目录
+P   : 到根目录
+?   : 帮助
+q   : 关闭
+K   : 到同级目录的第一个节点
+J   : 到同级目录的最后一个节点
+i   : 水平分割预览
+s   : 垂直分割预览
+t   : 打开一个 tab 页并跳转过去
+T   : 打开一个新的 tab 页不跳转过去
+M   : 菜单中，选择添加子节点即可添加目录或者文件
+r   : 刷新光标所在目录
+R   : 刷新当前根路径
+C   : 将根路径设置为光标所在的目录
+u   : 设置上级目录为根路径
+U   : 设置上级目录为跟路径，但是维持原来目录打开的状态
+```
+
+#### 2.8.2 `vim-easymotion`
+
+```shell
+\\s    快速查找移动，按显示的字母即可跳转
+\\w    光标后跳转单词
+\\b    光标前跳转单词
+\\k    光标前的行
+\\j    光标后的行
+```
+
+#### 2.8.3 `vim-prettier`
+
+```shell
+<leader>+p  : 格式化
+```
+
+#### 2.8.4 `ctrlp.vim`
+
+```shell
+Ctrl + p         搜索文件
+        ctrl + j/k  进行上下选择
+        ctrl + x    在当前窗口水平分屏打开文件 
+        ctrl + v    同上, 垂直分屏 
+        ctrl + t    在tab中打开
+```
+
+#### 2.8.5 `ctrlp-funky`
+
+```shell
+\fu    函数列表
+\fU    搜索当前光标所在单词的函数
+       ctrl + j/k  进行上下选择
+       Enter       跳转到函数
+```
+
+需要在 `.vimrc` 中设置如下代码（仓库中的 `.vimrc` 已设置）：
+
+```shell
+" fu 进入当前文件的函数列表搜索
+" fU 搜索当前光标下单词对应的函数
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+let g:ctrlp_funky_matchtype = 'path'
+let g:ctrlp_funky_syntax_highlight = 1
+```
+
+#### 2.8.6 `ag.vim`
+
+搜索包含 xxx 内容的文件： 
+
+```shell
+:Ag! xxx
+```
+
+#### 2.8.7 `tagbar`
+
+按 `F9` 打开关闭函数视图预览 `bar`
+
+> 需要进行如下的设置（本仓库中 `.vimrc` 已设置）
+
+```shell
+" tagbar 的配置
+nmap <F9> :TagbarToggle<CR>
+```
+
+#### 2.8.8 `vim-autopep8`
+
+```shell
+" autopep8配置 
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
+```
+
+#### 2.8.9 `c.vim` 
 
 在 `.vimrc` 中添加 `filetype plugin on` 语句后，每次打开 `.c` 文件，都会自动插入表头：
 
@@ -342,6 +438,8 @@ $
 ```
 
 **`\rc`** 保存后编译
+
+
 
 ## 3.tmux配置过程
 
