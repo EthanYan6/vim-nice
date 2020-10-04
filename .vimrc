@@ -51,6 +51,8 @@ Plugin 'fatih/vim-go'
 Plugin 'davidhalter/jedi-vim'
 " vue颜色显示
 Plugin 'posva/vim-vue'
+" c 语言插件
+Plugin 'vim-scripts/c.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
