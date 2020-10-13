@@ -53,6 +53,8 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'posva/vim-vue'
 " c 语言插件
 Plugin 'vim-scripts/c.vim'
+" 自动闭合标签 html 和 xml
+Plugin 'docunext/closetag.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
