@@ -222,6 +222,18 @@ vim ~/.vimrc
 set t_Co=256
 ```
 
+5.如果使用 `macvim` 软件的同学可能在升级新版本后，打开 `html/xml` 文件时报错，提示无法打开 `**/closetag.vim`，可以将下面目录中的文件：
+
+```shell
+~/.vim/bundle/closetag.vim/plugin/closetag.vim
+```
+
+移动到大概下方的位置：
+
+```shell
+/usr/local/Cellar/macvim/8.2-166/MacVim.app/Contents/Resources/vim/runtime/plugin
+```
+
 ### 2.8 部分插件使用说明
 
 #### 2.8.1 `nerdtree`
