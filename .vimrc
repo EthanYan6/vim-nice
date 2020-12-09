@@ -118,6 +118,10 @@ let g:ag_working_path_mode="r"
 """"""""""""""""""""""""""""""""""""""""""""""
 " autopep8配置 
 autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
+
+" syntastic 设置
+let g:syntastic_python_checkers = ['flake8']
+
 """"""""""""""""""""""""""""""""""""""""""""""
 " 缩进指示线配置 
 let g:indentLine_char = "┆"
