@@ -184,13 +184,13 @@ vim ~/.vimrc
 
 ### 2.7 注意
 
-1.如果报错：The ycmd server SHUT DOWN (restart with ...low the instructions in the documen
+~1.如果报错：The ycmd server SHUT DOWN (restart with ...low the instructions in the documen~ 
 
-**解决方法**：
+~**解决方法**：~ 
 
 ```shell
-cd ~/.vim/bundle/YouCompleteMe
-./install.py
+~cd ~/.vim/bundle/YouCompleteMe~
+~./install.py~
 ```
 
 2.如果报错：ERROR: Unable to find executable 'cmake'. CMake is required to build ycmd
