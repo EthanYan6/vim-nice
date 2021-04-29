@@ -4,8 +4,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-" 自动补全
-Plugin 'Valloric/YouCompleteMe'
 " 目录树
 Plugin 'scrooloose/nerdtree'
 " 给目录树添加 git支持
@@ -128,11 +126,6 @@ let g:indentLine_char = "┆"
 let g:indentLine_enabled = 1
 let g:autopep8_disable_show_diff=1
 """"""""""""""""""""""""""""""""""""""""""""""
-" YCM配置 
-let g:ycm_collect_identifiers_from_tags_files = 1           " 开启 YCM 基于标签引擎
-let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释与字符串中的内容也用于补全
-let g:ycm_seed_identifiers_with_syntax = 1                  " 语法关键字补全
-""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter配置 
 let g:gitgutter_terminal_reports_focus = 0
 nnoremap <leader>gd :GitGutterToggle<CR>
@@ -150,6 +143,13 @@ let g:go_highlight_extra_types = 1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
+""""""""""""""""""""""""""""""""""""""""""""""
+" jedi-vim设置
+" 代码补全
+let g:jedi#completions_command = "<C-N>"
+let g:jedi#smart_auto_mappings = 1
+let g:jedi#environment_path = '/usr/local/bin/python3.9'
+""""""""""""""""""""""""""""""""""""""""""""""
 augroup javascript_folding
     au!
     au FileType javascript setlocal foldmethod=syntax
