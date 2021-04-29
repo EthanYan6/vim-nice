@@ -188,10 +188,11 @@ vim ~/.vimrc
 
 ~**解决方法**：~ 
 
-```shell
-~cd ~/.vim/bundle/YouCompleteMe~
-~./install.py~
-```
+
+~cd \~/.vim/bundle/YouCompleteMe~ 
+
+~./install.py~ 
+
 
 2.如果报错：ERROR: Unable to find executable 'cmake'. CMake is required to build ycmd
 
