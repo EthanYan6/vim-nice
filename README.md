@@ -452,7 +452,29 @@ $
 
 **`\rc`** 保存后编译
 
+#### 2.9.0 jedi-vim
 
+默认配置快捷键
+
+```shell
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+```
+
+本配置文件应用后，自动补全快捷键变为了 `<C-N>`
+
+需要根据本人的 python 环境配置 python 的路径，在配置文件的第 151 行：
+
+```shell
+let g:jedi#environment_path = '/usr/local/bin/python3.9'
+```
+
+>   配置项的值更改为你电脑上的 python 路径
 
 ## 3.tmux配置过程
 
