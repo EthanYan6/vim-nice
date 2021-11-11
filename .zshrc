@@ -9,8 +9,6 @@ fi
 export ZSH="/Users/ethanyan/.oh-my-zsh"
 
 # 此处为typewritten主题的相关设置
-#ZSH_THEME="typewritten"
-#ZSH_THEME="color-input-line"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_LEGACY_ICON_SPACING=true
 
@@ -27,7 +25,6 @@ plugins=(
 
 # tab 补全系统
 autoload -U compinit && compinit -u
-
 
 # Setting PATH for java 8
 # 以前 java12 配置目录，没找到先预留export JAVA_HOME=$(/usr/libexec/java_home)
@@ -76,8 +73,6 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/mysql-client/lib"
 export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
 
-
-
 # macvim replace vim
 alias vi=vim
 alias vim=mvim
@@ -111,23 +106,22 @@ export CPPFLAGS="-I/usr/local/opt/bzip2/include"
 export PYENV_ROOT=~/.pyenv
 export PATH=$PYENV_ROOT/shims:$PATH
 # pyenv-virtualenv
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-# python3.8
-#export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-#export LDFLAGS="-L/usr/local/opt/python@3.8/lib"
-#export PKG_CONFIG_PATH="/usr/local/opt/python@3.8/lib/pkgconfig"
 # sphinx-doc
 export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
-
 
 export LDFLAGS="-L/usr/local/opt/readline/lib"
 export CPPFLAGS="-I/usr/local/opt/readline/include"
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+#nvm
+export NVM_DIR="/Users/ethanyan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 
 # 导入系统文件的环境变量
 source ~/.bash_profile
