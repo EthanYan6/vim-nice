@@ -77,8 +77,6 @@ export LDFLAGS="-L/usr/local/opt/mysql-client/lib"
 export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
 
 
-# perl
-eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
 # macvim replace vim
 alias vi=vim
