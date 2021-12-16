@@ -119,6 +119,8 @@ autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 
 " syntastic 设置
 let g:syntastic_python_checkers = ['flake8']
+autocmd FileType python setlocal colorcolumn=119
+let g:syntastic_python_flake8_post_args='--ignore=F821,E302,E501'
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " 缩进指示线配置 
