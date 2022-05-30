@@ -1,16 +1,8 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ethanyan/.oh-my-zsh"
 
 # 此处为typewritten主题的相关设置
-ZSH_THEME="powerlevel10k/powerlevel10k"
-POWERLEVEL9K_LEGACY_ICON_SPACING=true
+ZSH_THEME="typewritten"
 
 plugins=(
   git
@@ -42,7 +34,7 @@ export LANG="zh_CN.UTF-8"
 export LC_CTYPE="zh_CN.UTF-8"
 
 # 设置 git 命令执行前获取 sql
-alias git="$CAST_HOME/tool/git.sh"
+# alias git="$CAST_HOME/tool/git.sh"
 
 # 取消自动更新 homebrew
 export HOMEBREW_NO_AUTO_UPDATE=true
@@ -53,14 +45,6 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 
 # 导入 zsh 配置
 source $ZSH/oh-my-zsh.sh
-
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # sqlite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
@@ -83,13 +67,6 @@ alias python2='/usr/local/bin/python2.7'
 alias python3='/usr/local/bin/python3.9'
 alias python=python3
 
-# openssl@1.1
-#A CA file has been bootstrapped using certificates from the system
-#keychain. To add additional certificates, place .pem files in
-#  /usr/local/etc/openssl@1.1/certs
-#
-#and run
-#  /usr/local/opt/openssl@1.1/bin/c_rehash
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
@@ -121,6 +98,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 #nvm
 export NVM_DIR="/Users/ethanyan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # 导入系统文件的环境变量
