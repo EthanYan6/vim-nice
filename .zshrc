@@ -79,7 +79,7 @@ alias vim=mvim
 alias mvim='/usr/local/bin/mvim -v'
 
 # python3 and python2
-alias python2='/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7'
+alias python2='/usr/local/bin/python2.7'
 alias python3='/usr/local/bin/python3.9'
 alias python=python3
 
