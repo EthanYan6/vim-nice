@@ -366,9 +366,3 @@ au BufRead,BufNewFile * setfiletype txt
 set foldenable 
 set foldmethod=indent 
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc':'zo')<CR> 
-
-" minibufexpl插件的一般设置 
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1
