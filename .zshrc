@@ -2,7 +2,7 @@
 export ZSH="/Users/ethanyan/.oh-my-zsh"
 
 # 此处为typewritten主题的相关设置
-ZSH_THEME="typewritten"
+ZSH_THEME="avit"
 
 plugins=(
   git
